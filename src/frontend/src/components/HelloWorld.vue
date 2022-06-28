@@ -4,23 +4,26 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data(){
+  name: "HelloWorld",
+  data() {
     return {
-      msg:''
-    }
+      msg: "",
+    };
   },
-  mounted(){
+  mounted() {
     fetch("/api/messages/hello")
-    .then(response => response.text())
-    .then(data => {
-      this.msg = data;
-    })
-  }
-}
+      .then((response) => response.text())
+      .then((data) => {
+        this.msg = data;
+      });
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+h1 {
+  color: blue;
+  background: pink;
+}
 </style>
